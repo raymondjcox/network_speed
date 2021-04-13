@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile-server
+    volumes:
+      - data:/usr/src/network_speed/data
+  nginx-server:
+    build:
+      context: .
+      dockerfile: Dockerfile-nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - data:/usr/share/nginx/html/data
+      # - ./html:/usr/share/nginx/html
+volumes:
+  data:

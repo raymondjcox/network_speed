@@ -1,0 +1,8 @@
+FROM rust:1.49
+
+WORKDIR /usr/src/network_speed
+COPY . .
+
+RUN cargo install --path .
+
+CMD ["network-speed"]
