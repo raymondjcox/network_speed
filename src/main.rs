@@ -3,7 +3,7 @@ use tokio::fs::OpenOptions;
 use tokio::io::AsyncWriteExt;
 
 const TARGET_URL: &str = "https://upload.wikimedia.org/wikipedia/commons/2/2d/Snake_River_%285mb%29.jpg";
-const OUT_FILE_NAME: &str = "./data/speed.csv";
+const OUT_FILE_NAME: &str = "./data/speed.txt";
 const KNOWN_SIZE: f64 = 5245329.0;
 const NUM_BITS: f64 = KNOWN_SIZE * 8.0;
 const SECONDS_WAIT_BETWEEN_FETCHES: u64 = 10;
